@@ -80,5 +80,5 @@ function gotoLeaderboard() {
 }
 
 function changeName() { 
-    window.location.href = "intro.html"; 
+    window.location.href = "index.html"; 
 }
