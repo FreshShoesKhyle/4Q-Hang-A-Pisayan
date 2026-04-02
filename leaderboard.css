@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: #3d85c6; 
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #67a0bf;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid white;
+}
+
+.btn-primary {
+    background-color: #00bcd4;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border: 2px solid white;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+}
+
+.notice {
+    font-size: 300px;
+}

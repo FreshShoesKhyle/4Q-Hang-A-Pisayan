@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hang A Pisayan - Exam</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body onload="startGame()">
+    <nav class="navbar">
+        <div class="logo">Hang A Pisayan :3</div>
+        <a href="home.html" class="btn-primary">QUIT EXAM</a>
+    </nav>
+
+    <div id="gameContainer">
+        <div class="header-ui">
+            <div class="header-left" id="difficultyDisplay">DIFF: EASY</div>
+            <div class="header-center" id="heartContainer"></div>
+            <div class="header-right" id="timerDisplay">00:00</div>
+        </div>
+
+        <div id="revealedLetters">_ _ _ _</div>
+
+        <button id="hintBtn" onclick="useHint()">HINT (3 LEFT)</button>
+
+        <div id="keyBoard">
+            <div class="kb-row">
+                <button id="btn-Q" onclick="handleGuess('Q', this)">Q</button>
+                <button id="btn-W" onclick="handleGuess('W', this)">W</button>
+                <button id="btn-E" onclick="handleGuess('E', this)">E</button>
+                <button id="btn-R" onclick="handleGuess('R', this)">R</button>
+                <button id="btn-T" onclick="handleGuess('T', this)">T</button>
+                <button id="btn-Y" onclick="handleGuess('Y', this)">Y</button>
+                <button id="btn-U" onclick="handleGuess('U', this)">U</button>
+                <button id="btn-I" onclick="handleGuess('I', this)">I</button>
+                <button id="btn-O" onclick="handleGuess('O', this)">O</button>
+                <button id="btn-P" onclick="handleGuess('P', this)">P</button>
+            </div>
+            <div class="kb-row">
+                <button id="btn-A" onclick="handleGuess('A', this)">A</button>
+                <button id="btn-S" onclick="handleGuess('S', this)">S</button>
+                <button id="btn-D" onclick="handleGuess('D', this)">D</button>
+                <button id="btn-F" onclick="handleGuess('F', this)">F</button>
+                <button id="btn-G" onclick="handleGuess('G', this)">G</button>
+                <button id="btn-H" onclick="handleGuess('H', this)">H</button>
+                <button id="btn-J" onclick="handleGuess('J', this)">J</button>
+                <button id="btn-K" onclick="handleGuess('K', this)">K</button>
+                <button id="btn-L" onclick="handleGuess('L', this)">L</button>
+            </div>
+            <div class="kb-row">
+                <button id="btn-Z" onclick="handleGuess('Z', this)">Z</button>
+                <button id="btn-X" onclick="handleGuess('X', this)">X</button>
+                <button id="btn-C" onclick="handleGuess('C', this)">C</button>
+                <button id="btn-V" onclick="handleGuess('V', this)">V</button>
+                <button id="btn-B" onclick="handleGuess('B', this)">B</button>
+                <button id="btn-N" onclick="handleGuess('N', this)">N</button>
+                <button id="btn-M" onclick="handleGuess('M', this)">M</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="idModal" class="modal hidden">
+        <div class="id-card">
+            <div class="id-left">
+                <div class="id-photo">
+                    <img id="idImage" src="" alt="Student" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div id="idStatusStamp">PASSED</div>
+            </div>
+            <div class="id-right">
+                <h2>STUDENT ID</h2>
+                <p class="id-info"><span class="label-cyan">NAME:</span> <span id="idName"></span></p>
+                <p class="id-info"><span class="label-cyan">LEVEL:</span> <span id="idLevel"></span></p>
+                <p class="id-info"><span class="label-cyan">TIME USED:</span> <span id="idTime"></span></p>
+                <p class="id-info"><span class="label-cyan">WORD WAS:</span> <span id="idWord"></span></p>
+                <button onclick="window.location.href='home.html'" class="btn-primary" style="margin-top:10px">HOME</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

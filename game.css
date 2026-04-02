@@ -1,0 +1,168 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'VT323', monospace; 
+}
+
+body { 
+    background-color: #3d85c6; 
+    color: white; 
+    text-align: center; 
+}
+
+.navbar { 
+    background: #67a0bf;
+    padding: 15px 50px; 
+    display: flex; 
+    justify-content: space-between; 
+    border-bottom: 4px solid white; 
+}
+
+.btn-primary { 
+    background: #00bcd4; 
+    color: white; 
+    padding: 5px 15px; 
+    text-decoration: none; 
+    border: 2px solid white;
+     cursor: pointer; 
+}
+
+#gameContainer {
+    margin: 50px auto;
+    display: inline-block;
+    padding: 30px;
+    background: rgba(0, 30, 60, 0.85);
+    border: 4px solid #00bcd4;
+    border-radius: 12px;
+}
+
+.header-ui { 
+    display: grid; 
+    grid-template-columns: 1fr 200px 1fr; 
+    align-items: center; 
+    border-bottom: 2px solid white; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.header-left { 
+    text-align: left; 
+}
+
+.header-right { 
+    text-align: right; 
+}
+
+.header-center { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 5px; 
+}
+
+.heart-icon {
+    width: 25px;
+    height: auto;
+}
+
+#revealedLetters { 
+    font-size: 4rem; 
+    letter-spacing: 12px; 
+    margin: 25px 0; 
+}
+
+#hintBtn {
+    background: #f1c40f; 
+    border: 2px solid white; 
+    padding: 10px 20px;
+    font-family: 'VT323'; 
+    font-size: 24px; 
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.kb-row { 
+    display: flex; 
+    justify-content: 
+    center; margin-bottom: 5px; 
+}
+
+#keyBoard button { 
+    width: 45px; 
+    height: 45px; 
+    margin: 3px; 
+    background: #002b5c; 
+    color: white; 
+    border: 2px solid white; 
+    cursor: pointer; 
+    font-size: 22px; 
+}
+
+.correct-btn { 
+    background-color: #2ecc71; 
+}
+
+.wrong-btn { 
+    background-color: #e74c3c; 
+}
+
+.modal { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    background: rgba(0,0,0,0.8); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 100; 
+}
+
+.hidden { 
+    display: none; 
+}
+
+.id-card { 
+    background: white; 
+    color: #333; 
+    padding: 25px; 
+    display: flex; 
+    border: 5px solid #002b5c; 
+    border-radius: 10px; 
+    width: 550px; 
+    text-align: left; 
+}
+
+.id-left { 
+    border-right: 2px dashed #002b5c; 
+    padding-right: 20px; 
+    text-align: center; 
+}
+
+.id-photo { 
+    width: 140px; 
+    height: 140px; 
+    border: 3px solid #002b5c
+    ; background: #eee; 
+    margin-bottom: 10px; 
+}
+
+#idStatusStamp { 
+    font-size: 32px; 
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+.id-right { 
+    padding-left: 20px; 
+    flex-grow: 1; 
+}
+
+.label-cyan { 
+    color: #008ba3; 
+    font-weight: bold; 
+}

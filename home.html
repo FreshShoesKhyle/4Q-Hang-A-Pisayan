@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hang A Pisayan - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-section">
+            <img src="https://i.redd.it/zzdhvlontjby.gif" class="bg-gif" alt="shrimp-background">
+            <div class="welcome-badge">
+                Welcome, <span id="playerNameDisplay" onclick="changeName()">Student</span>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <div class="button-group">
+                <button class="info-btn" onclick="openInfo()">?</button>
+                <button class="nav-btn" onclick="openTutorial()">Tutorial</button>
+                <button class="nav-btn" onclick="pickDifficulty()">Play Game</button>
+                <button class="nav-btn" onclick="gotoLeaderboard()">Leaderboard</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="tutorial-card">
+            <button class="close-tutorial" onclick="cancelGame()">X</button>
+            <h2 style="font-size: 36px; margin-bottom: 25px;">SELECT DIFFICULTY</h2>
+            <div id="difficultyButtons">
+                <button onclick="selectDifficulty('easy')" class="arrow-btn">EASY</button>
+                <button onclick="selectDifficulty('medium')" class="arrow-btn">MID</button>
+                <button onclick="selectDifficulty('hard')" class="arrow-btn">HARD</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal hidden">
+        <div class="info-card">
+            <button class="close-tutorial" onclick="closeInfo()">X</button>
+
+            <div class="info-header">
+                <img src="shrimp-logo.png" alt="Shrimp Logo" class="info-logo">
+                <h2 class="info-title">ABOUT THE GAME</h2>
+            </div>
+
+            <div class="info-content">
+                <p>Welcome to <strong>Hang A Pisayan</strong>! We've reimagined the classic "Hangman" specifically for
+                    the Pisay community.</p>
+                <br>
+                <p>In our version, we've traded the traditional gallows for the academic grind. "Hanging" here
+                    represents the struggle to stay afloat during exam season. We've replaced generic words with Science
+                    and Math terminology to keep your brain sharp!</p>
+                <br>
+                <p>Pass the "exam" by guessing the word to earn your digital Student ID. Fail, and well... there's
+                    always the next retake!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tutorialModal" class="modal hidden">
+        <div class="tutorial-card">
+            <button class="close-tutorial" onclick="closeTutorial()">X</button>
+            <div class="tutorial-slide-container">
+                <p id="tutorialDesc" class="tutorial-text"></p>
+                <div class="tutorial-image-box">
+                    <img id="tutorialImg" src="" alt="Tutorial Step">
+                </div>
+            </div>
+            <div class="tutorial-controls">
+                <button class="arrow-btn" onclick="prevSlide()">&#10094;</button>
+                <span id="slideIndicator">1 / 4</span>
+                <button class="arrow-btn" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>
