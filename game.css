@@ -101,14 +101,23 @@ body {
     font-size: 22px; 
 }
 
-.correct-btn { 
-    background-color: #2ecc71; 
+#keyBoard button.correct-btn { 
+    background-color: #2ecc71 !important; 
+    color: white;
 }
 
-.wrong-btn { 
-    background-color: #e74c3c; 
+#keyBoard button.wrong-btn { 
+    background-color: #e74c3c !important; 
+    color: white;
 }
 
+#keyBoard button:active {
+    transform: scale(0.9);
+}
+
+#keyBoard button:hover {
+    transform: scale(1.1);
+}
 .modal { 
     position: fixed; 
     top: 0; 

@@ -14,7 +14,7 @@ function closeInfo() {
 let currentStep = 0;
 const tutorialSlides = [
     { 
-        text: "STEP 1: Choose your difficulty! Options: Easy (5 min), Mid (10 min), and Hard (15 min). Guess correctly before time is up!", 
+        text: "STEP 1: Choose your difficulty! Options: Easy (5 min), Mid (7.5 min), and Hard (10 min). Guess correctly before time is up!", 
         img: "tut-step1.png" 
     },
     { 
@@ -45,7 +45,7 @@ function updateTutorialUI() {
     const slide = tutorialSlides[currentStep];
     document.getElementById("tutorialDesc").innerText = slide.text;
     document.getElementById("tutorialImg").src = slide.img;
-    document.getElementById("slideIndicator").innerText = (currentStep + 1) + " / " + tutorialSlides.length;
+    document.getElementById("slideIndicator").innerText = `${(currentStep + 1)} / ${tutorialSlides.length}`;
 }
 
 function nextSlide() { 

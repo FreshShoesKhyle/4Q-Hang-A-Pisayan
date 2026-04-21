@@ -6,15 +6,15 @@
 
 body {
     font-family: 'VT323', monospace;
-    background-color: #3d85c6; 
+    background: linear-gradient(#0099D3, #006c94);
     color: white;
     text-align: center;
     min-height: 100vh;
 }
 
 .navbar {
-    background-color: #67a0bf;
-    padding: 15px 50px;
+    background-color: #7fcdff;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,14 +23,134 @@ body {
 
 .btn-primary {
     background-color: #00bcd4;
-    color: white;
     padding: 8px 15px;
-    text-decoration: none;
     border: 2px solid white;
-    font-family: 'VT323', monospace;
     cursor: pointer;
+    font-family: 'VT323', monospace;
 }
 
-.notice {
-    font-size: 300px;
+.pixel-title {
+    font-size: 6rem;
+    margin-top: 30px;
+    text-shadow: 4px 4px #000;
+}
+
+.diff-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.diff-btn {
+    width: 200px;
+    padding: 12px;
+    border: 3px solid black;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 4px 4px 0 black;
+    font-family: 'VT323', monospace;
+}
+
+.diff-btn:hover {
+    transform: scale(1.1);
+}
+
+#easy-btn { 
+    background: #34a134; 
+}
+
+#easy-btn:hover { 
+    background: #207520; 
+}
+
+#mid-btn { 
+    background: #e2f10a; 
+    color: black; 
+}
+
+#mid-btn:hover { 
+    background: #a7b309; 
+}
+
+#hard-btn { 
+    background: #ee3131; 
+}
+
+#hard-btn:hover { 
+    background: #961919; 
+}
+.leaderboard-container {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 900px;
+    background: #0b7297;
+    border: 4px solid #b2e0f5;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.leaderboard-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    font-size: 1.6rem;
+}
+
+.lb-left {
+    text-align: left;
+    font-weight: bold;
+}
+
+.lb-right {
+    text-align: left;
+    border-left: 3px solid white;
+    padding-left: 15px;
+}
+
+.lb-line {
+    display: block;
+}
+
+.lb-name {
+    flex: 1;
+    text-align: left;
+}
+
+.lb-data {
+    flex: 1;
+    text-align: right;
+    border-left: 3px solid white;
+    padding-left: 15px;
+}
+
+.weezer-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    object-fit: cover;
+    animation: shake 0.1s infinite;
+}
+
+.weezer-btn {
+    margin-top: 100px;
+    cursor: pointer;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 8rem;
+}
+
+
+@keyframes shake { 
+    0% { transform: translate(2px, 2px); }
+    50% { transform: translate(-4px, -3px); }
+    100% { transform: translate(2px, -2px); }
 }

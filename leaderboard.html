@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Campus Records</title>
+    <title>Leaderboard</title>
     <link rel="stylesheet" href="leaderboard.css">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
-<body onload="initLeaderboard()">
-    <header>
-        <nav class="navbar">
-            <div class="logo">Hang A Pisayan :3</div>
-            <a href="home.html" class="btn-primary">HOME</a>
-        </nav>
-    </header>
 
-    <div class="notice">
-        <h1> THIS PAGE IS CURRENTLY UNAVAILABLE! </h1>
+<body>
+
+    <div class="navbar">
+        <h1>LEADERBOARD</h1>
+        <button class="btn-primary" onclick="window.location.href='home.html'">HOME</button>
     </div>
 
+    <h1 class="pixel-title">TOP SCHOLARS</h1>
+
+    <div class="diff-container">
+        <button class="diff-btn" id="easy-btn" onclick="filterLeaderboard('easy')">EASY</button>
+        <button class="diff-btn" id="mid-btn" onclick="filterLeaderboard('medium')">MEDIUM</button>
+        <button class="diff-btn" id="hard-btn" onclick="filterLeaderboard('hard')">HARD</button>
+    </div>
+
+    <div class="leaderboard-container">
+        <div id="leaderboard"></div>
+    </div>
+
+    <img src="coral-background.jpg" class="weezer-btn" onclick="triggerWeezer()" alt="weezer button">
+    <img src="https://i.scdn.co/image/ab67616d00001e02b24373be5b8f4776812c4a21" class="weezer-image" id="weezerPopup" alt="weezer popup">
+    
     <script src="leaderboard.js"></script>
 </body>
+
 </html>

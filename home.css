@@ -1,14 +1,14 @@
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'VT323', monospace;
     height: 100vh;
-    overflow: hidden;
     background-color: black;
+    overflow: hidden;
 }
 
 .main-container {
@@ -18,9 +18,9 @@ body {
 }
 
 .left-section {
-    flex: 0 0 70%;
+    flex: 2;
     position: relative;
-    border-right: 4px solid white;
+    border-right: 0.25rem solid white;
     overflow: hidden;
 }
 
@@ -32,14 +32,13 @@ body {
 
 .welcome-badge {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(0, 43, 92, 0.8); 
-    padding: 10px 25px;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 43, 92, 0.85);
+    padding: 0.6rem 1.5rem;
     color: white;
-    font-size: 30px;
-    border: 2px solid white;
-    z-index: 5;
+    font-size: 1.8rem;
+    border: 0.15rem solid white;
 }
 
 #playerNameDisplay {
@@ -50,38 +49,39 @@ body {
 
 .right-sidebar {
     flex: 1;
-    background-color: #3d85c6; 
+    background-color: #3d85c6;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
+    position: relative;
+    padding: 1rem;
 }
 
 .button-group {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 85%;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 300px;
 }
 
 .info-btn {
+    font-family: 'VT323', monospace;
     position: absolute;
-    top: 20px; 
-    right: 20px;
-    width: 45px;
-    height: 45px;
+    top: 1rem;
+    right: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
     border-radius: 50%;
     background: #00bcd4;
     color: white;
-    font-family: 'VT323';
-    font-size: 28px;
-    border: 2px solid white;
+    font-size: 1.5rem;
+    border: 0.15rem solid white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s;
-    z-index: 10;
+    transition: 0.2s;
 }
 
 .info-btn:hover {
@@ -92,11 +92,11 @@ body {
 
 .nav-btn {
     font-family: 'VT323', monospace;
-    font-size: 28px;
-    padding: 18px;
+    font-size: 1.6rem;
+    padding: 1rem;
     background: white;
-    border: 3px solid #002b5c;
-    box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    border: 0.2rem solid #002b5c;
+    box-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: 0.1s;
 }
@@ -109,135 +109,121 @@ body {
 
 .modal {
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
-    width: 100vw; 
+    width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.85);
-    display: flex;         
-    justify-content: center; 
-    align-items: center;    
-    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
-    display: none; 
+    display: none;
 }
 
-
-.tutorial-card, .info-card {
-    background-color: #3d85c6;
-    border: 5px solid white;
-    border-radius: 40px; 
-    color: white;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    padding: 40px;
-}
-
-.tutorial-card {
-    width: 650px;
-    max-width: 95%;
-}
-
+.tutorial-card,
 .info-card {
-    width: 550px;
-    max-width: 90%;
+    font-family: 'VT323', monospace;
+    background-color: #3d85c6;
+    border: 0.3rem solid white;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
 }
 
 .info-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid white;
-    padding-bottom: 15px;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid white;
+    padding-bottom: 1rem;
 }
 
 .info-logo {
-    width: 65px;
-    height: 65px;
-    image-rendering: pixelated;
+    width: 3.5rem;
 }
 
 .info-title {
-    font-size: 34px;
-    margin: 0;
+    font-size: 2rem;
 }
 
 .info-content {
-    font-size: 22px;
+    font-size: 1.2rem;
     text-align: left;
-    line-height: 1.3;
-    max-height: 300px;
+    line-height: 1.4;
+    max-height: 250px;
     overflow-y: auto;
-    padding: 0 10px;
-}
-
-.close-tutorial { 
-    position: absolute; 
-    top: 15px; 
-    right: 25px; 
-    background: none; 
-    border: none; 
-    color: white; 
-    font-size: 35px; 
-    cursor: pointer; 
 }
 
 .tutorial-text {
-    font-size: 26px;
-    margin-bottom: 20px;
-    min-height: 80px;
-    line-height: 1.2;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
 }
 
-.tutorial-image-box { 
-    background: #002b5c; 
-    border: 3px solid #00bcd4; 
-    border-radius: 20px; 
-    padding: 15px; 
+.tutorial-image-box {
+    background: #002b5c;
+    border: 0.2rem solid #00bcd4;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
-#tutorialImg { 
-    width: 100%; 
-    max-height: 280px; 
-    object-fit: contain; 
-    border-radius: 10px; 
+#tutorialImg {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
 }
 
 .tutorial-controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin-top: 25px;
+    gap: 2rem;
+    margin-top: 1rem;
 }
 
-.arrow-btn { 
-    background: #00bcd4; 
-    color: white; 
-    border: 3px solid white; 
-    padding: 8px 25px; 
-    border-radius: 15px; 
-    cursor: pointer; 
-    font-family: 'VT323';
+.arrow-btn {
+    background: #00bcd4;
+    color: white;
+    border: 3px solid white;
+    padding: 8px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
     font-size: 24px;
 }
 
-.arrow-btn:hover { 
-    background: #008ba3; 
+.arrow-btn:hover {
+    background: #008ba3;
 }
 
-#slideIndicator { 
-    font-size: 28px; 
+
+#slideIndicator {
+    font-size: 1.5rem;
 }
 
 #difficultyButtons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-family: 'VT323', monospace;
+}
+
+.close-tutorial {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
 }

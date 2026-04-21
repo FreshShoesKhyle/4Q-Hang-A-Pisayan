@@ -1,19 +1,24 @@
 function showGif() {
-    document.getElementById("clickScreen").classList.add("hidden");
-    document.getElementById("gifScreen").classList.remove("hidden");
-    
+    const clickScreen = document.getElementById("clickScreen");
+    const gifScreen = document.getElementById("gifScreen");
+    const formScreen = document.getElementById("formScreen");
+
+    clickScreen.classList.add("hidden");
+    gifScreen.classList.remove("hidden");
+
     setTimeout(function() {
-        document.getElementById("gifScreen").classList.add("hidden");
-        document.getElementById("formScreen").classList.remove("hidden");
+        gifScreen.classList.add("hidden");
+        formScreen.classList.remove("hidden");
     }, 3000);
 }
 
 function saveAndGo() {
-    var name = document.getElementById("nameInput").value.trim();
+    let name = document.getElementById("nameInput").value.trim();
+
     if (name.length < 3) {
-        alert("Name is too short! Use 3+ letters.");
+        alert("Name must be at least 3 characters.");
     } else {
-        localStorage.setItem("pisayPlayerName", name); //
+        localStorage.setItem("pisayPlayerName", name);
         window.location.href = "home.html";
     }
 }
